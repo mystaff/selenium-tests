@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://staff.com/" />
+<title>Login-Success</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login-Success</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=companyName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Productivity Analytics for the Workday</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>Would you like to demo Staff.com?</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;Test Company &quot; + Math.floor(Math.random() * 5000)}</td>
+	<td>Company</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=companyName</td>
+	<td>${Company}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=name</td>
+	<td>Test Machine</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;tester.ice&quot; + Math.floor(Math.random() * 1000) +&quot;@staff.dev&quot;;}</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=email</td>
+	<td>${Email}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=password</td>
+	<td>q1w2e3r4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//button[@type='submit']</td>
+	<td>Continue</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div[2]</td>
+	<td>Choose &quot;Silent&quot; or &quot;Interactive&quot; tracking</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//h1</td>
+	<td>Please choose which method you’d like to use:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/h4</td>
+	<td>Interactive Tracking</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div/div[2]/div[2]</td>
+	<td>Your employees can see Staff.com running.<br /><br />Start and stop tracking whenever they choose.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/button</td>
+	<td>I want to try this first →</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Help, I can't decide!</td>
+	<td>Help, I can't decide!</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>CHOOSE SILENT TRACKING IF...</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>Your employees work in an office and you don’t want your employees to interact with Staff.com at all.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[2]/h2</td>
+	<td>CHOOSE INTERACTIVE TRACKING IF...</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/p</td>
+	<td>Your employees are allowed to use their computers for personal activities. This is often the case with employees who work from home.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[1]/div[2]/div/div/div[1]/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=//input[@name=&quot;invitedUserName&quot;]</td>
+	<td>Tester</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;tester.invite&quot; + Math.floor(Math.random() * 1000) +&quot;@staff.dev&quot;;}</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=input_2</td>
+	<td>${Email}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1.md-title</td>
+	<td>Invitation sent successfully!</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[15]</td>
+	<td>OK</td>
+</tr>
+</tbody></table>
+</body>
+</html>

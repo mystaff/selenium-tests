@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://staff.com/" />
+<title>Login-Success</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login-Success</td></tr>
+</thead><tbody>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=companyName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Productivity Analytics for the Workday</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>Would you like to demo Staff.com?</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;Test Company &quot; + Math.floor(Math.random() * 1000)}</td>
+	<td>Company</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=companyName</td>
+	<td>${Company}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=name</td>
+	<td>Test Machine</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;tester.ice&quot; + Math.floor(Math.random() * 1000) +&quot;@staff.dev&quot;;}</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=email</td>
+	<td>${Email}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=password</td>
+	<td>q1w2e3r4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//button[@type='submit']</td>
+	<td>Continue</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div[2]</td>
+	<td>Choose &quot;Silent&quot; or &quot;Interactive&quot; tracking</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//h1</td>
+	<td>Please choose which method you’d like to use:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3.text-center</td>
+	<td>(Don’t worry, you can try the other one later)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h4.bolder</td>
+	<td>Silent Tracking</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.mid-content</td>
+	<td>Your employees won’t see anything on their computer.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Help, I can't decide!</td>
+	<td>Help, I can't decide!</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=button</td>
+	<td>I want to try this first →</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.layout-align-center-start.layout-column</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1.md-title</td>
+	<td>Welcome to your dashboard!</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[14]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=mainUserMenuButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.md-off</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
