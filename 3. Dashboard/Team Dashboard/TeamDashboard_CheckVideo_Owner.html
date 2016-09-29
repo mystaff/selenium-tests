@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://staff.com/" />
+<title>Login-Success</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login-Success</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;Test Company &quot; + Math.floor(Math.random() * 5000)}</td>
+	<td>Company</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;tester.ice&quot; + Math.floor(Math.random() * 1000) +&quot;@staff.dev&quot;;}</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=companyName</td>
+	<td>${Company}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=name</td>
+	<td>Test Machine</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=email</td>
+	<td>${Email}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=password</td>
+	<td>q1w2e3r4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[1]/div[2]/div/div/div[1]/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>break</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--/*scroll down the page manually-->
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>How it works</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>Here's an overview video to help you get started →</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//a[@class='layout-align-center-center layout-row']</td>
+	<td>https://www.youtube.com/watch?v=mQl2ys2fz4I</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//a[@ng-click='vm.closeVideoWidget()']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
