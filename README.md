@@ -8,6 +8,7 @@ Installation:
 - Download Selenium IDE plugin for Firefox
 - Launch Selenium IDE plugin
 - Select a file or test case to open is Selenium IDE
-- To run: click the button play current test case to run a test case
+- Click the button play current test case to run a test case
+
 --------------------------------------------------------------------
 
